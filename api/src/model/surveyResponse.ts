@@ -56,8 +56,23 @@ export async function getSurveyResponse(surveyResponseId: number): Promise<ISurv
     return get(table, surveyResponseId);
 }
 
+/**
+ * We ignore the raw_response column here to ensure faster querying.
+ */
 export async function getSurveyResponses(surveyId: number): Promise<ISurveyResponse[] | null> {
     return connection<ISurveyResponseWithBlockchain[]>(table)
+        .select(
+            'id',
+            'survey_id',
+            'user_id',
+            'location_id',
+            'bc_transaction_id',
+            'external_source_id',
+            'created_at',
+            'updated_at',
+            'recorded_at',
+            'metadata'
+        )
         .where('survey_id', surveyId)
         .then((rows: any) => {
             return rows ? rows : null;
