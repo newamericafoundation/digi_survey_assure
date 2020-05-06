@@ -1,0 +1,44 @@
+version: '3.2'
+services:
+    postgres:
+      image: postgres:12.2-alpine
+      environment:
+      -  "POSTGRES_PASSWORD=password"
+      volumes:
+        - ./api/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      ports:
+        - 5432:5432
+    # redis:
+    #     image: redis
+    #     environment:
+    #       - ALLOW_EMPTY_PASSWORD=yes
+    #     ports: 
+    #       - "6379:6379"
+    survey_assure:
+      build:
+        context: .
+      # restart: always
+      volumes: 
+        # - ./frontend/build:/usr/src/app/frontend/build
+        # - ./api/build:/usr/src/app/api/build
+        - /usr/src/app/node_modules
+      env_file:
+        - ./api/.env
+      ports:
+        - 4000:4000
+      depends_on: 
+        - postgres
+        # - redis
+    # survey_assure_frontend:
+    #   build:
+    #     context: .
+    #   restart: always
+    #   volumes: 
+    #     - ./:/usr/src/app
+    #     - /usr/src/app/node_modules
+    #   env_file:
+    #     - ./frontend/.env
+    #   ports:
+    #     - 4001:4001
+    #   depends_on: 
+    #     - survey_assure_api

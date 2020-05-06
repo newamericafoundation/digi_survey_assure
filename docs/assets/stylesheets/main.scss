@@ -1,0 +1,133 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Theme skin
+@import "basically-basic/themes/{{ site.data.theme.skin | default: 'default' }}";
+
+@import "basically-basic";
+
+// https://d3fvh0lm0eshry.cloudfront.net/static/logo-black.svg
+// 
+body {
+    background-color: #f7f4f2 !important;
+    color: #333;
+}
+
+.intro {
+    background-color: #f7f4f2;
+    padding: 32px 0;
+    margin-bottom: 42px;
+    margin-top: 0px !important;
+}
+
+hr {
+    margin: 64px 0;
+    border: 2px dotted #e1e1e1;
+    height: 2px;
+}
+
+.title-area {
+    background: url(https://d3fvh0lm0eshry.cloudfront.net/static/logo-black.svg) no-repeat;
+    background-position: 1.8125rem center;
+    background-size: 120px;
+}
+
+.sidebar {
+    .menu {
+        font-size: calc(12px + 24 * ((100vw - 320px) / 960));
+    }
+}
+
+.site-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-indent: -9999px;
+    background: url(../images/logo.svg) no-repeat left center;
+    background-size: 160px;
+    margin-left: 160px; 
+}
+
+@media (min-width: 48em) {
+    .title-area {
+        background-position: 2rem center;
+    }
+
+    .site-title {
+        margin-left: 180px; 
+        background-size: 180px;
+    }
+
+    .intro {
+        padding: 64px 0;
+    }
+}
+
+@media (min-width: 64em) {
+    .title-area {
+        background-position: 5vw center;
+    }
+
+    .site-title {
+        margin-left: 210px;
+        background-size: 190px;
+    }
+
+    .intro {
+        padding: 82px 0;
+    }
+}
+
+.navFlow {
+    border: 1px solid #333;
+    padding: 12px 18px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+
+    .next {
+        float: right;
+    }
+}
+
+.navBottom {
+    margin-top: 24px;
+}
+
+.page-content {
+    padding-bottom: 42px;
+}
+
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+    color: #333;
+}
+
+.intro-title {
+    color: #333 !important;
+}
+
+.site-title a {
+    color: #333;
+}
+
+a {
+    text-decoration: none !important;
+    color: #2ebcb3 !important;
+}
+
+.language-plaintext {
+    color: #e64412;
+    border-bottom: 1px solid #e64412;
+    padding: 2px;
+}
+
+#main {
+    h1:first-of-type {
+        display: none;
+    }
+}
+
+header.section-title {
+    display: none;
+}

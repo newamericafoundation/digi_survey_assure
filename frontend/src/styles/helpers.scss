@@ -1,0 +1,79 @@
+
+/**
+ * Text Transformations
+ */
+.textBold { font-weight: bold; }
+.textUppercase { text-transform: uppercase; }
+
+.textSmall { font-size: 0.8em; }
+.textLarger { font-size: 1.2em; }
+
+.textGray { color: #828282; }
+.textRed { color: red; }
+.textGreen { color: #41CC32; }
+.textItalic { font-style: italic; }
+
+.textLeft { text-align: left; }
+.textCenter { text-align: center; }
+.textRight { text-align: right; }
+
+/**
+ * Margins
+ */
+.marginBottomNone { margin-bottom: 0px !important; }
+.marginBottom4 { margin-bottom: 4px !important; }
+.marginBottom8 { margin-bottom: 8px !important; }
+.marginBottom12 { margin-bottom: 12px !important; }
+.marginBottom24 { margin-bottom: 24px !important; }
+.marginTop12 { margin-top: 12px !important; }
+.marginTop24 { margin-top: 24px !important; }
+.marginTop48 { margin-top: 48px !important; }
+.marginLeft4 { margin-left: 4px !important; }
+.marginLeft8 { margin-left: 8px !important; }
+.marginLeft12 { margin-left: 12px !important; }
+
+/**
+ * Borders
+ */
+.borderNone { border: none !important; }
+
+/**
+ * General
+ */
+.positionRelative { position: relative; }
+.pointer { cursor: pointer; }
+.grab { cursor: grab; }
+.inlineBlock { display: inline-block; }
+.show { display: block !important; }
+.hide { display: none !important; }
+.hideMobile { display: block; }
+.filterIcon, .passwordIcon, .menuIcon { display: none; }
+.floatRight { float: right; }
+.floatLeft { float: left; }
+
+.container {
+    padding: $surveyPadding;
+    margin-left: $tocWidth;
+}
+
+.noToc {
+    margin-left: 0px !important;
+}
+
+/**
+ * Loader
+ */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto 24px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

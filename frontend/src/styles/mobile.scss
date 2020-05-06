@@ -1,0 +1,73 @@
+// @media screen and (max-width: 40em) {
+//     .responsiveTable td .tdBefore {
+//         display: block;
+//         padding-left: 1px !important;
+//         left: 0px;
+//         top: 0px;
+//         text-overflow: ellipsis;
+//     }
+// }
+
+@media only screen and (max-device-width: 768px) {
+    // .responsiveTable {
+    //     td.pivoted {
+    //         display: block;
+    //         padding-left: 1px !important;
+    //         padding-top: 20px;
+    //         text-overflow: ellipsis;
+    //     }
+    // }
+
+    .container {
+        margin-left: 0px;
+    }
+
+    .menuIcon {
+        display: block;
+        float: left;
+        width: 32px;
+        height: 32px;
+        margin-right: 6px;
+    }
+
+    .tableOfContents {
+        position: relative;
+        z-index: 10;
+        display: none;
+        width: 100% !important;
+        margin-bottom: 18px;
+    }
+
+    .hideMobile {
+        display: none;
+    }
+
+    .password-input {
+        display: none;
+        float: none;
+    }
+
+    .filters {
+        display: none;
+    }
+
+    /* Icon color */
+    .step {
+        color: #000;
+    }
+
+    .filterIcon, .passwordIcon {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    .passwordIcon {
+        float: right;
+    }
+
+    .totalSurveyed {
+        float: none;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,185 @@
+
+/**
+ * Modal
+ */
+.modalUnderlay {
+  background-color: rgba(64, 64, 64, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  position: fixed;
+  z-index: 12;
+  overflow-y: hidden;
+  top: 0;
+  left: 50%;
+  margin-left: -35%;
+  margin-top: 24px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+
+  .modalInternal {
+    overflow-y: auto;
+    margin: 57px 0;
+    padding: 24px;
+    max-height: 70vh;
+  }
+
+  .modalHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 24px;
+    height: 57px;
+    line-height: 57px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+  .modelFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 0 24px;
+    height: 57px;
+    line-height: 57px;
+    background-color: #fff;
+  }
+
+  .closeModal {
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  button {
+    color: #fff;
+    padding: 8px 13px;
+    border: none;
+    border-radius: 2px;
+  }
+
+  button:disabled, button[disabled] {
+    background-color: #fff !important;
+    font-style: italic;
+    color: #ccc;
+    border: 1px solid #E0E0E0;
+  }
+
+  button.inactive {
+    background-color: #E0E0E0;
+  }
+
+  button.active {
+    background-color: #2D9CDB;
+  }
+
+  button.deleteButton {
+    border: 1px solid #ff0000;
+    background-color: #fff;
+    color: #ff0000;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 57px;
+  }
+
+  p.leadText {
+    font-size: 19px;
+    margin-bottom: 24px;
+  }
+}
+
+.imagePreview {
+  border: 1px solid #a2a2a2;
+  width: 168px;
+  height: 92px;
+  padding: 12px;
+  border-radius: 2px;
+  background-size: cover;
+  margin-bottom: 24px;
+}
+
+.iconBox .entry {
+  display: inline-block;
+  height: 42px;
+  width: 42px;
+  margin-bottom: 6px;
+  color: #000;
+  text-align: center;
+}
+
+.containerBox {
+  border: 1px solid #a2a2a2;
+  border-radius: 2px;
+  padding: 16px;
+}
+
+.compositeGroupSelect {
+  h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000;
+    margin: 0 0 12px 0;
+    padding: 0;
+    border: none;
+  }
+
+  th, td {
+      padding: 6px 0;
+  }
+
+  th {
+      text-align: left;
+      border: none;
+  }
+
+  td {
+      border-bottom: 1px solid #f1f1f1;
+      vertical-align: top;
+  }
+
+  td:last-child {
+      width: 190px;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+}
+
+.iconPreview {
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 72px;
+  line-height: 72px;
+  margin: auto 0;
+  color: #fff;
+}
+
+ul.previewDataPoints {
+  margin: 0;
+  border: 1px solid #c4c4c4;
+  padding: 16px;
+  list-style: none;
+  height: 233px;
+  overflow-y: scroll;
+}
+
+ul.previewDataPoints li {
+  padding-bottom: 12px;
+}

@@ -1,0 +1,4 @@
+{
+    "formula_average": "Calculated by getting the percent of respondents who selected a response within the applicable data set for each question and then averages the percentages of all questions together to form a composite percentage.",
+    "formula_meanCutoff": "Percentage of respondents whose average score across all questions, that make up the composite and which they answered, meet the criteria for the composite (average of %cutoff% or above)."
+}

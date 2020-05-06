@@ -1,0 +1,35 @@
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.gridItem {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #999;
+}
+
+.fullLength {
+    grid-column: 1 / -1;
+}
+
+.grid3Wrapper {
+  display: grid;
+  grid-template-columns: 33% 32% 33%;
+  grid-gap: 1%;
+}
+
+.grid2Wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+    grid-gap: 1%;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .grid3Wrapper {
+    display: block;
+  }
+}

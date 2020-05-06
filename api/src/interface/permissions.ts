@@ -1,0 +1,21 @@
+export type IPermissionGroups = 'composite'
+    | 'compositeGroup'
+    | 'question'
+    | 'questionGroup'
+    | 'setting'
+    | 'survey'
+    | 'surveyGroup';
+
+export type IPermissionScopes = 'cache'
+    | 'close'
+    | 'create'
+    | 'delete'
+    | 'filters'
+    | 'get'
+    | 'getPrivate'
+    | 'importResponses'
+    | 'privacy'
+    | 'read'
+    | 'reorder'
+    | 'spanEntireRow'
+    | 'update';

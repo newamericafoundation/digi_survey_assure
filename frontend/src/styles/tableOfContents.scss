@@ -1,0 +1,85 @@
+
+/**
+ * Table of Contents
+ */
+.tableOfContents {
+  width: $tocWidth;
+  border-right: 2px solid #f1f1f1;
+  background-color: #636363;
+  float: left;
+  font-size: 90%;
+  min-height: calc(100vh - 98px);
+}
+
+.tableOfContents ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+}
+
+.tableOfContents a {
+  color: #828282;
+}
+
+.tableOfContents ul li {
+  padding: 7px 9px;
+  margin: 0;
+}
+
+.tableOfContents ul li.indentSmall {
+  font-size: 85%;
+  padding: 3px 9px 3px 34px;
+}
+
+.tableOfContents ul li.indentSmall:last-child {
+  padding-bottom: 12px;
+}
+
+.tableOfContents ul li.heading1 a,
+.tableOfContents ul li.heading2 a,
+.tableOfContents ul li.heading3 a {
+  color: #fff;
+}
+
+.tableOfContents ul li.heading1 {
+  background-color: #424141;
+  color: #fff;
+}
+
+.tableOfContents ul li.heading2 {
+  background-color: #828282;
+  color: #fff;
+}
+
+.tableOfContents ul li.heading3 {
+  background-color: #A2A2A2;
+  color: #fff;
+}
+
+.tableOfContents ul li.indent {
+  padding: 3px 9px 3px 34px;
+}
+
+.tableOfContents ul li.indentPlus {
+  padding: 7px 9px 7px 34px;
+}
+
+.tableOfContents ul li.divider {
+  border-bottom: 1px solid #f1f1f1;
+  margin: 0;
+  padding: 0px;
+  height: 0px;
+}
+
+.icon {
+  color: #fff;
+  min-width: 18px;
+  min-height: 18px;
+  border-radius: 18px;
+  text-align: center;
+  line-height: 18px;
+  margin-right: 7px;
+  display: inline-block;
+}

@@ -1,0 +1,73 @@
+@import 'variables.scss';
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+.surveyOverviewData {
+    float: right;
+    line-height: 34px;
+    color: #555;
+}
+
+.surveyOverviewData span {
+    float: left;
+    margin-left: 24px;
+}
+
+.auditLeft {
+    float: left;
+    width: 50%;
+    padding-right: 2px;
+}
+
+.auditRight {
+    float: left;
+    width: 50%;
+    padding-left: 2px;
+}
+
+.totalSurveyed {
+    float: right;
+}
+
+pre {
+    padding: 12px;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    overflow-x: scroll;
+}
+
+span.code {
+    border: 1px solid #e1e1e1;
+    background-color: #f9f9f9;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.clear {
+    clear: both;
+}
+
+.highlight {
+    background-color: #ffffcc;
+    border: 1px solid #ffeb3b;
+    padding: 12px;
+    border-radius: 2px;
+}
+
+p.fullSurveyLink {
+    text-align: right;
+    float: right;
+}
+
+.filterEntry {
+    float: left;
+    margin-right: 8px;
+}

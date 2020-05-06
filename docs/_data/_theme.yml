@@ -1,0 +1,14 @@
+t:
+  posts: ""
+
+navigation_pages:
+  - project_history.md
+  - features.md
+  - structure.md
+  - installation.md
+  - administration.md
+  - presentation_and_viewing.md
+  - faq.md
+  - best_practices.md
+  - contributing.md
+  - license.md

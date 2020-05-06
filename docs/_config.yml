@@ -1,0 +1,6 @@
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
+# theme: jekyll-theme-minimal
+
+title: Survey Assure
+
+paginate: 0

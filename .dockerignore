@@ -1,0 +1,8 @@
+api/build
+api/node_modules
+api/.env
+api/.git
+frontend/build
+frontend/node_modules
+frontend/.env
+frontend/.git

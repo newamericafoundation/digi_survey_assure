@@ -1,0 +1,38 @@
+
+.graphAudit {
+    font-size: 0.8em;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 4px 0 0 0;
+    // position: absolute;
+    // z-index: 10;
+    // top: 0;
+    // right: 0;
+    // background-color: rgba(255, 255, 255, 0.9);
+    // border-radius: 2px;
+}
+
+.graphAudit a {
+    color: #999;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.graphAudit span:not(:last-child) {
+    margin-right: 8px;
+    // margin-bottom: 8px;
+    // display: block;
+}
+
+.question-group {
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 40em) {
+    .limitText {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+    }
+}

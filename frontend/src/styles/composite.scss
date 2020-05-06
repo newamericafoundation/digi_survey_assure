@@ -1,0 +1,82 @@
+@import 'variables.scss';
+
+.compositeList {
+  padding: $surveyPadding;
+}
+
+.compositeBlock {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1px;
+  border: 1px solid #000;
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+
+.compositeHeader {
+    margin-top: 24px;
+}
+
+.compositeBoxInnerRight p {
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+
+p.applicableAnswers {
+  font-size: 90%;
+}
+
+.primaryComposite {
+  display: table;
+  height: 100%;
+  border-right: 1px solid #e1e1e1;
+}
+
+.primaryCompositeTotal {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 24px;
+}
+
+.primaryCompositeTotal h1 {
+  font-size: 250%;
+}
+
+.primaryCompositeTotal p.explainer {
+  font-size: 85%;
+  color: #222;
+  font-style: italic;
+}
+
+.compositeBlockInner {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.compositeBoxInnerLeft {
+  text-align: left;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.compositeBoxInnerLeft p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.compositeBoxInnerRight {
+  padding: 20px;
+  background-color: #d1d1d1;
+  text-align: center;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .compositeBlock {
+    grid-template-columns: none ;
+  }
+  .compositeBlockInner {
+    grid-template-columns: none ;
+  }
+}
