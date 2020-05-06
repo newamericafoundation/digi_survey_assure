@@ -15,7 +15,7 @@ A very special thank you to the [US State Department](https://www.state.gov/), w
 ### ConsenSys
 - Engineering
   - [Jonathan Belelieu](https://github.com/jbelelieu)
-- Design
+- Product Design
   - [Jakob Haglof](http://jakobhaglof.com/)
 - Product
   - Walter Jansen
