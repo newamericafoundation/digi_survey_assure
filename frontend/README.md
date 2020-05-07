@@ -36,6 +36,10 @@ There are two config files: a local development env file and a production env fi
 
 Local config is used when `npm start` is used, where the production config is used when `npm run build` is used.
 
+# Manifest
+
+You will want to update your `public/manifest.json` file as well to reflect the values listed above. manifest.json provides metadata used when your web app is installed on a user's mobile device or desktop. See [https://developers.google.com/web/fundamentals/web-app-manifest/](https://developers.google.com/web/fundamentals/web-app-manifest/).
+
 # Building the Project
 
 - To build for local development, use `npm start`.
