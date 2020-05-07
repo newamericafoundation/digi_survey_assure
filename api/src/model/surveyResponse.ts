@@ -8,9 +8,10 @@ const table = 'survey_response';
 
 export async function countTotalResponses(surveyId: number): Promise<number> {
     return connection(table)
+        .count('id', { as: 'count' })
         .where('survey_id', surveyId)
         .then((results: any) => {
-            return results.length > 0 ? parseInt(results[0].count, 10) : 0;
+            return results ? parseInt(results[0].count, 10) : 0;
         })
         .catch((error: any) => {
             console.log(error);
@@ -25,6 +26,18 @@ export async function createSurveyResponse(data: ISurveyResponsePayload): Promis
 
 export async function getResponseFromExternalId(surveyId: number, externalId: string | number): Promise<ISurveyResponse | null> {
     return connection(table)
+        .select(
+            'id',
+            'survey_id',
+            'user_id',
+            'location_id',
+            'bc_transaction_id',
+            'external_source_id',
+            'created_at',
+            'updated_at',
+            'recorded_at',
+            'metadata'
+        )
         .where('survey_id', surveyId)
         .where('external_source_id', externalId)
         .limit(1)
@@ -40,6 +53,18 @@ export async function getResponseFromExternalId(surveyId: number, externalId: st
 
 export async function getResponsesWithoutBcTransaction(surveyId: number): Promise<ISurveyResponse[] | null> {
     return connection<ISurveyResponse[]>(table)
+        .select(
+            'id',
+            'survey_id',
+            'user_id',
+            'location_id',
+            'bc_transaction_id',
+            'external_source_id',
+            'created_at',
+            'updated_at',
+            'recorded_at',
+            'metadata'
+        )
         .where('survey_id', surveyId)
         .whereNull('bc_transaction_id')
         .then((rows: any) => {
@@ -87,7 +112,16 @@ export async function getSurveyResponses(surveyId: number): Promise<ISurveyRespo
 export async function getSurveyResponsesForSurveyWithBlockchainData(surveyId: number): Promise<ISurveyResponseWithBlockchain[] | null> {
     return connection<ISurveyResponseWithBlockchain[]>(table)
         .select(
-            'survey_response.*',
+            'survey_response.id',
+            'survey_response.survey_id',
+            'survey_response.user_id',
+            'survey_response.location_id',
+            'survey_response.bc_transaction_id',
+            'survey_response.external_source_id',
+            'survey_response.created_at',
+            'survey_response.updated_at',
+            'survey_response.recorded_at',
+            'survey_response.metadata',
             'bc_transaction.tx_id',
             'bc_transaction.receipt',
             'bc_transaction.network',
