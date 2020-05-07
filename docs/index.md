@@ -10,7 +10,7 @@ layout: page
 
 # Overview 
 
-<img src="https://newamericafoundation.github.io/assets/images/survey_assure_01.png" style="margin-bottom:12px;max-width:100%;height:auto;" />
+<img src="assets/images/survey_assure_01.png" style="margin-bottom:12px;max-width:100%;height:auto;" />
 
 Survey Assure is a real-time tool designed to aggregate survey responses from various data sources (for example, [Qualtrics](https://www.qualtrics.com/)), make the contents of those survey responses immutible via use of the Ethereum blockchain, and enable you to create a "presentation layer" in order to visualize those responses and analyze the data without altering it. In other words, it is designed to foster trust between companies and employees by allowing employees to know that their survey responses were not altered in any way.
 

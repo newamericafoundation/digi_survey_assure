@@ -7,6 +7,13 @@ title: Project History
   <div class="previous"><a href="index.html">&laquo; Introduction</a></div>
 </div>
 
+- [Project History](#project-history)
+  - [Stakeholders & Participants](#stakeholders--participants)
+  - [Problem](#problem)
+  - [Solution](#solution)
+  - [Current State (2019)](#current-state-2019)
+  - [With Survey Assure (2020)](#with-survey-assure-2020)
+
 # Project History
 
 *The genesis of this work started with an extensive discovery phase that examined the current state of workforce surveys and the concerns/issues around them.  We then looked at how blockchain technology could address some of these issues particularly around the ideas of increased security, immutability, transparency and efficiency.  Wanting our solution to be as accessible as possible to the broader community we undertook a pilot to develop an open source application that would leverage the advantages of the blockchain, enable workers and managers alike to have better insight into the results of surveys and be able to continuously evolve.*

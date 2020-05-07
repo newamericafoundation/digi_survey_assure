@@ -7,6 +7,9 @@ title: Features
   <div class="previous"><a href="002-project_history.html">&laquo; Project History</a></div>
 </div>
 
+- [Features](#features)
+  - [Feature Highlights](#feature-highlights)
+
 # Features
 
 *Survey Assure is built around core functions that support the hashing, import and visualization of data that can be guaranteed on chain from live connections and archived sources.*

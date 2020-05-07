@@ -1,4 +1,4 @@
-# License
+# License (MIT)
 
 <div class="navFlow">
   <div class="next"><a href="index.html">Introduction &raquo;</a></div>

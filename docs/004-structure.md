@@ -7,9 +7,36 @@ title: Application Structure
   <div class="previous"><a href="003-features.html">&laquo; Features</a></div>
 </div>
 
+- [Application Structure](#application-structure)
+  - [Diagrams](#diagrams)
+    - [Technical Components](#technical-components)
+    - [Dashboard Workflow](#dashboard-workflow)
+    - [Database Structure](#database-structure)
+  - [Front End](#front-end)
+  - [Plugins](#plugins)
+  - [Blockchain](#blockchain)
+  - [Infrastructure & Dependencies](#infrastructure--dependencies)
+  - [Application Logic](#application-logic)
+
 # Application Structure
 
 *An overview of the components and libraries that comprise the functional application.*
+
+## Diagrams
+
+### Technical Components
+
+<img src="assets/images/structure_01.png" style="margin-bottom:12px;max-width:100%;height:auto;" />
+
+### Dashboard Workflow
+
+<img src="assets/images/structure_02.png" style="margin-bottom:12px;max-width:100%;height:auto;" />
+
+### Database Structure
+
+*Valid as of v1.0.1 of the application.*
+
+<img src="assets/images/db.png" style="margin-bottom:12px;max-width:100%;height:auto;" />
 
 ## Front End
 

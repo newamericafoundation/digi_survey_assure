@@ -28,6 +28,7 @@ title: Contributing
     - [Addition Requirements](#addition-requirements)
   - [Batch Anonymizer](#batch-anonymizer)
   - [Frontend Themes](#frontend-themes)
+  - [Transition from Knex to node-postgres](#transition-from-knex-to-node-postgres)
   - [Improved Audit Layer Display](#improved-audit-layer-display)
   - [Composite Strategy Plugin System](#composite-strategy-plugin-system)
     - [Addition Requirements](#addition-requirements-1)
@@ -161,6 +162,12 @@ In the above example, we are telling the application that question ID `75` on su
 ## Frontend Themes
 
 - Definition: open ended request for different frontend themes for the platform!
+
+---------
+
+## Transition from Knex to node-postgres
+
+- Definition: using [Knex](http://knexjs.org/) poses more problems than it solves, and with support for non-Postgres SQL databases not implemented, it is no longer required. Therefore the recommendation is to avoid using a query builder in favor of directly using [node-postgres](https://node-postgres.com/) for interactions with the database.
 
 ---------
 

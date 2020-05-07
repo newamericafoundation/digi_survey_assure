@@ -7,6 +7,10 @@ title: Presentation and Viewing
   <div class="previous"><a href="006-administration.html">&laquo; Administration</a></div>
 </div>
 
+- [Presentation and Viewing](#presentation-and-viewing)
+  - [Audience](#audience)
+  - [Display Support](#display-support)
+
 # Presentation and Viewing
 
 ## Audience
