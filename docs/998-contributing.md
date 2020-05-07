@@ -26,6 +26,7 @@ title: Contributing
   - [Survey Group Aggregates](#survey-group-aggregates)
   - [User Management & Permissions](#user-management--permissions)
     - [Addition Requirements](#addition-requirements)
+  - [Batch Anonymizer](#batch-anonymizer)
   - [Frontend Themes](#frontend-themes)
   - [Improved Audit Layer Display](#improved-audit-layer-display)
   - [Composite Strategy Plugin System](#composite-strategy-plugin-system)
@@ -147,6 +148,13 @@ In the above example, we are telling the application that question ID `75` on su
 
 - The ability to create user groups and assign permissions (`user_group`).
 - The ability to create users and assign them to a user group.
+
+---------
+
+## Batch Anonymizer
+
+- Definition: a privacy tool that pools real-time responses and delays their inclusion in the database until a suitable number of responses is in the pool, thereby improving privacy of users submitting survey responses.
+- Notes: see the "Best Practices" section under "Maintaining Privacy (Important!)" for information on why this is important.
 
 ---------
 

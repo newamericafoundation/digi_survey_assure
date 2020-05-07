@@ -8,6 +8,7 @@ title: Best Practices
 </div>
 
 - [Best Practices](#best-practices)
+  - [Maintaining Privacy (Important!)](#maintaining-privacy-important)
   - [Separate live and test surveys](#separate-live-and-test-surveys)
   - [Start on a testnet, transition to mainnet (if required)](#start-on-a-testnet-transition-to-mainnet-if-required)
   - [Build composites AFTER a survey has been closed](#build-composites-after-a-survey-has-been-closed)
@@ -31,6 +32,11 @@ title: Best Practices
 
 # Best Practices
 
+## Maintaining Privacy (Important!)
+
+- NEVER include identifying information in survey questions. While that information isn't sent to the blockchain, the information will be displayed in some places throughout the application.
+- Anonymous, in the sense of this application, is limited to data being hashed. The application, being real time, cannot prevent process issues from potentially revealing user identities. For example, if responses are coming in one-by-one, it is relatively easy to determine who submitted that survey response. You can avoid this by having multiple users taking the survey at once so that it is less clear which response maps to which person, or you can avoid it by deactiving your real-time listener (webhook) from your data source and manually importing the survey responses in batches every couple of hours/days.
+
 ## Separate live and test surveys
 
 We do not recommend sending "test" responses from a survey that will be used to process actual responses. This will skew the data and cost ETH when writing to the blockchain. If you can't separate test and live surveys, the app does offer the ability to programmatically exclude some responses based on their content. Take a look at `api/plugin/normalizer/qualtrics/data/exclude.ts` for an example.
@@ -46,7 +52,6 @@ Please see the FAQ question "Composites are taking a while to calculate - why?" 
 ## Avoid importing large data sets in favor of real-time data populating
 
 If possible, users should use this tool as a net-new tool, meaning real-time over importing. Importing is costly and time consuming and should only be done if absolutely required.
-
 
 # Getting Started
 
