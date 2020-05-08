@@ -10,7 +10,6 @@ export const config = {
     JWT_SECRET: getEnvVariable('JWT_SECRET'),
     NODE_ENV: getEnvVariable('NODE_ENV', 'production'),
     PORT: getEnvVariable('PORT', '4000'),
-    PROJECT_NAME: getEnvVariable('PROJECT_NAME', 'Survey Assure'),
 
     /**
      * Blockchain-related Configuration
