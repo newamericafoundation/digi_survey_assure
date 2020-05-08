@@ -8,10 +8,10 @@ title: Installation
 </div>
 
 - [Installation](#installation)
-  - [Requirements](#requirements)
-  - [Github Repo](#github-repo)
-  - [Before you Begin](#before-you-begin)
-  - [1. Blockchain Setup](#1-blockchain-setup)
+  - [Server Requirements](#server-requirements)
+  - [1. Clone the Github Repo](#1-clone-the-github-repo)
+  - [2. Create your `.env` Files](#2-create-your-env-files)
+  - [3. Blockchain Setup](#3-blockchain-setup)
     - [Setting Up A Provider](#setting-up-a-provider)
     - [Using a Custom Infura Account](#using-a-custom-infura-account)
     - [Setting Up Your Wallet](#setting-up-your-wallet)
@@ -21,12 +21,12 @@ title: Installation
     - [Deploying Your Contract](#deploying-your-contract)
       - [Update your `.env` file](#update-your-env-file)
       - [Run the Deploy Command](#run-the-deploy-command)
-  - [2. Configuration Setup](#2-configuration-setup)
+  - [4. Configuration Setup](#4-configuration-setup)
     - [Update Your `.env` Files](#update-your-env-files)
     - [Configurating Data Source Credentials](#configurating-data-source-credentials)
       - [Qualtrics](#qualtrics)
     - [A Note About Deploying to PaaS Services (Config Values)](#a-note-about-deploying-to-paas-services-config-values)
-  - [3. Deploying](#3-deploying)
+  - [5. Deploying](#5-deploying)
     - [Docker](#docker)
     - [Manually Building and Deploying](#manually-building-and-deploying)
       - [Postgres](#postgres)
@@ -40,20 +40,28 @@ title: Installation
 
 # Installation
 
-## Requirements
+## Server Requirements
 
-- NodeJS 10.16+
-- Postgres 12.2+
+- [NodeJS 10.16+](https://nodejs.org/en/download/)
+- [Postgres 12.2+](https://www.postgresql.org/download/)
 
-## Github Repo
+## 1. Clone the Github Repo
 
-The GitHub repo for the project can be found <a href="https://github.com/newamericafoundation/digi_survey_assure" target="_blank">here</a>.
+The GitHub repo for the project can be found <a href="https://github.com/newamericafoundation/digi_survey_assure" target="_blank">here</a>. You'll need to clone this locally before you begin.
 
-## Before you Begin
+To do this, use a CLI tool (for example "Terminal" on Mac), navigate to the directory where you want the project to live (`cd path/to/survey_assure`), and close the repo using:
+
+```
+git clone https://github.com/newamericafoundation/digi_survey_assure.git digi_survey_assure .
+```
+
+If your machine doesn't have git installed, please refer to this <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">documentation</a>.
+
+## 2. Create your `.env` Files
 
 In both `/api` and `/frontend`, make a copy of `.example.env` and rename them to `.env`. You will be editing these throughout the setup process.
 
-## 1. Blockchain Setup
+## 3. Blockchain Setup
 
 ### Setting Up A Provider
 
@@ -128,7 +136,7 @@ Copy the value of `YOUR_CONTRACT_ADDRESS_HERE` into your `api/.env` file under t
 
 You are now ready to deploy the application to your web server. If the application throws an error, you will need to double check all of your blockchain config values to ensure that they are correct and try again.
 
-## 2. Configuration Setup
+## 4. Configuration Setup
 
 ### Update Your `.env` Files
 
@@ -159,7 +167,7 @@ SURVEY_DATA_PROVIDER_CRED1=YOUR_API_KEY_HERE
 
 If you are deploying to a PaaS platform like [Heroku](https://devcenter.heroku.com/articles/config-vars), [Netlify](https://docs.netlify.com/configure-builds/environment-variables/) or [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html#environments-cfg-softwaresettings-console) without using Docker, you will need to manually input all environment variables into those platforms directly before deploying. In other words, your `.env` file only matters for Docker and local deployments.
 
-## 3. Deploying
+## 5. Deploying
 
 A number of options are available to you when it comes to deploying the application. Please select the strategy which best fits your business needs.
 
