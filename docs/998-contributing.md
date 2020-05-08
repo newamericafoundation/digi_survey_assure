@@ -51,10 +51,10 @@ To be approved into the codebase, all code must at a minimum:
 
 1. Follow the "Code Structure/Responsibilities" listed below,
 2. Pass linting for code quality as laid out 
-3. New packages much not have security warnings at or above "high" from NPM.
-4. New packages much use a license of equal of more liberal guidelines than the MIT license.
+3. New packages must not have security warnings at or above "high" from NPM.
+4. New packages must use a license of equal of more liberal limitations than the MIT license.
 5. Code must be self-documenting, with comments only existing where code isn't obviously descriptive or complex logic requires it.
-6. Variable names much be consistent with the existant schemes (casing, verbiage, etc.).
+6. Variable names must be consistent with the existent schemes (casing, verbiage, etc.).
 7. All code must be written in Typescript with strict typings/interfaces whenever possible.
 
 ## I/O Flow
@@ -71,7 +71,7 @@ To be approved into the codebase, all code must at a minimum:
 
 #### Controllers
 - Accept the request from the routers and coordinate logic required to execute the task WITHOUT directly 
-- Think of controllers of a high-level "declarative" functions: they show you how to achieve a task without spelling out the dirty details of what is being done to achieve those tasks. In other words, the "coordinate" models, services, and helpers to execute the required business logic.
+- Think of controllers as a high-level "declarative" functions: they show you how to achieve a task without spelling out the dirty details of what is being done to achieve those tasks. In other words, the "coordinate" models, services, and helpers to execute the required business logic.
 - Controllers are solely responsible for form validation via "Validators".
 - Must return a success/error object in ALL cases to the routes, which never manipulate that response.
 
@@ -86,7 +86,7 @@ To be approved into the codebase, all code must at a minimum:
 - A good example of a use case would be grabbing a list of available plugins: there is no model for this since it is built into the physical directory structure of the app so instead we use a simple helper function to grab this data.
 
 #### Services
-- A single-responsiblity module that is more complex than a "helper" function, thereby turning it into a service.
+- A single-responsibility module that is more complex than a "helper" function, thereby turning it into a service.
 
 #### Plugins
 - Modular tools that are designed to integrate third party applications in a way that the application can use without additional changes to the core application code.
@@ -96,7 +96,7 @@ Plugins are split into three types:
 
 ##### Normalizers
 
-Normalizers accept data from a third party surveying platfrom (example: Qualtrics) and re-shape the incoming data to work with our application's database structure. Effectively they allow us to "normalize" data from any survey platform and make it compatible with our application.
+Normalizers accept data from a third party surveying platform (example: Qualtrics) and re-shape the incoming data to work with our application's database structure. Effectively they allow us to "normalize" data from any survey platform and make it compatible with our application.
 
 - Qualtrics (https://www.qualtrics.com/)
 
@@ -167,7 +167,7 @@ In the above example, we are telling the application that question ID `75` on su
 
 ## Transition from Knex to node-postgres
 
-- Definition: using [Knex](http://knexjs.org/) poses more problems than it solves, and with support for non-Postgres SQL databases not implemented, it is no longer required. Therefore the recommendation is to avoid using a query builder in favor of directly using [node-postgres](https://node-postgres.com/) for interactions with the database.
+- Definition: using [Knex](http://knexjs.org/) poses more problems than it solves, and with support for non-Postgres SQL-based databases not implemented, it is no longer required. Therefore the recommendation is to avoid using a query builder in favor of directly using [node-postgres](https://node-postgres.com/) for interactions with the database.
 
 ---------
 
@@ -181,7 +181,7 @@ In the above example, we are telling the application that question ID `75` on su
 
 ## Composite Strategy Plugin System
 
-- Definition: The ability to use different stategies for displaying composite results. By default a percentage is displayed, but alternatives could include an "Emoji Strategy", fixed scale for color coding composite backgrounds, and more.
+- Definition: The ability to use different strategies for displaying composite results. By default a percentage is displayed, but alternatives could include an "Emoji Strategy", fixed scale for color coding composite backgrounds, and more.
   - Emoji example: 0-33 (% range) = &#128577;, 34-66 = &#128528;, 67-100 = &#128512;
   - Fixed color scale example: 0-33 (% range) = red, 34-66 = yellow, 67-100 = green.
 
@@ -205,25 +205,25 @@ In the above example, we are telling the application that question ID `75` on su
 
 ## Frontend TypeScript Migrations
 
-- Defintion: the application started off without TypeScript on the frontend, but was later added, leaving some legacy files still written in plain JS. In an effort to clean up the frontend code, all `.js` files need to be converted to properly typed `.tsx` files.
+- Definition: the application started off without TypeScript on the frontend, but was later added, leaving some legacy files still written in plain JS. In an effort to clean up the frontend code, all `.js` files need to be converted to properly typed `.tsx` files.
 
 ---------
 
 ## Modular Visualizers for Frontend
 
-- Defintion: presently, ChartJS is the only supported visualizer on the frontend. Making this modular will allow for cleaner code when additional visualizer plugins are created (see `frontend/src/components/Question.js`).
+- Definition: presently, ChartJS is the only supported visualizer on the frontend. Making this modular will allow for cleaner code when additional visualizer plugins are created (see `frontend/src/components/Question.js`).
 
 ---------
 
 ## Improved UX around blockchain events/long lived events (mass imports)
 
-- Defintion: Blockchain events when performing "mass" actions (mass import, closing a survey, etc.) can take long periods of time. The program needs a better UX for displaying that progress to the user.
+- Definition: Blockchain events when performing "mass" actions (mass import, closing a survey, etc.) can take long periods of time. The program needs a better UX for displaying that progress to the user.
 
 ---------
 
 ## Cache Computed Question Responses for Closed Surveys
 
-- Defintion: Additional caching is needed for questions and question groups once a survey is closed.
+- Definition: Additional caching is needed for questions and question groups once a survey is closed.
 
 ---------
 
@@ -247,19 +247,19 @@ In the above example, we are telling the application that question ID `75` on su
 
 ## Import a Single Response From ID
 
-- Defintion: Ability to import a single response from a survey source.
+- Definition: Ability to import a single response from a survey source.
 
 ---------
 
 ## Anonymous User Management
 
-- Defintion: Ability to have user profiles which can be anonymized and limit usage of specific surveys (1 token = 1 survey response).
+- Definition: Ability to have user profiles which can be anonymized and limit usage of specific surveys (1 token = 1 survey response).
 
 ---------
 
 ## Mark Surveys as "Test" Surveys
 
-- Defintion: Ability to mark a survey as a test survey, making it bypass the blockchain communications.
+- Definition: Ability to mark a survey as a test survey, making it bypass the blockchain communications.
 
 
 

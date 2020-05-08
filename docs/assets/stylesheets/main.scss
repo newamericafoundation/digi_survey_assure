@@ -4,13 +4,10 @@
 
 @charset "utf-8";
 
-// Theme skin
 @import "basically-basic/themes/{{ site.data.theme.skin | default: 'default' }}";
 
 @import "basically-basic";
 
-// https://d3fvh0lm0eshry.cloudfront.net/static/logo-black.svg
-// 
 body {
     background-color: #f7f4f2 !important;
     color: #333;
@@ -32,7 +29,7 @@ hr {
 .title-area {
     background: url(https://d3fvh0lm0eshry.cloudfront.net/static/logo-black.svg) no-repeat;
     background-position: 1.8125rem center;
-    background-size: 120px;
+    background-size: 100px;
 }
 
 .sidebar {
@@ -47,7 +44,7 @@ hr {
     text-indent: -9999px;
     background: url(../images/logo.svg) no-repeat left center;
     background-size: 160px;
-    margin-left: 160px; 
+    margin-left: 140px;
 }
 
 @media (min-width: 48em) {

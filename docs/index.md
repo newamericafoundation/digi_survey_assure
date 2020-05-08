@@ -12,7 +12,7 @@ layout: page
 
 <img src="assets/images/survey_assure_01.png" style="margin-bottom:12px;max-width:100%;height:auto;" />
 
-Survey Assure is a real-time tool designed to aggregate survey responses from various data sources (for example, [Qualtrics](https://www.qualtrics.com/)), make the contents of those survey responses immutible via use of the Ethereum blockchain, and enable you to create a "presentation layer" in order to visualize those responses and analyze the data without altering it. In other words, it is designed to foster trust between companies and employees by allowing employees to know that their survey responses were not altered in any way.
+Survey Assure is a real-time tool designed to aggregate survey responses from various data sources (for example, [Qualtrics](https://www.qualtrics.com/)), make the contents of those survey responses immutable via use of the Ethereum blockchain, and enable you to create a "presentation layer" in order to visualize those responses and analyze the data without altering it. In other words, it is designed to foster trust between companies and employees by allowing employees to know that their survey responses were not altered in any way.
 
 - [Overview](#overview)
 - [Github](#github)
@@ -56,7 +56,7 @@ The core aspects of the platform are as follows:
 
 - Aggregates: For survey groups with multiple surveys, allows you to visualize side-by-side comparisons of similar questions.
   - Example: you may have a quarterly employee survey whereby the questions don't change, in which case you could graph them side-by-side to compare and see trends.
-- Audit Layer: "Proof" layer with information on how the hash which was sent to the blockchain was calcuated.
+- Audit Layer: "Proof" layer with information on how the hash which was sent to the blockchain was calculated.
 - Data Source: A 3rd party survey provider platform.
   - Example: [Qualtrics](https://www.qualtrics.com/)
 - Survey Filter: a question on a survey that can be used to limit the applicable data set displayed on any chart.
@@ -65,7 +65,7 @@ The core aspects of the platform are as follows:
 
 # Immutability
 
-Merkle trees are used to create an immutible "hash stamp" that can be used as a proof that data was not changed when it was added into Survey Assure. The "pure" representation of the data can always be found within the "Audit Layer" of the platform (click the "Audit" link on any graph); this means that even if a question is "hidden" from the interface, the data itself was still used to build the merkle tree and can be auditted at any time.
+Merkle trees are used to create an immutable "hash stamp" that can be used as a proof that data was not changed when it was added into Survey Assure. The "pure" representation of the data can always be found within the "Audit Layer" of the platform (click the "Audit" link on any graph); this means that even if a question is "hidden" from the interface, the data itself was still used to build the merkle tree and can be audited at any time.
 
 ## Merkle Tree Recipe
 

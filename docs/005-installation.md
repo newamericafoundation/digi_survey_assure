@@ -82,7 +82,7 @@ BLOCKCHAIN_WALLET_PRIVATE_KEY
 
 #### A Note About Your Wallet's Balance
 
-You will need to manually manage your wallet and ensure that it always has an acceptible balance (Survey Assure does not do this for you). Failure to do so will result in rejected blockchain requests. Please see the "Estimating Blockchain Costs" section for a general guide on anticipated costs.
+You will need to manually manage your wallet and ensure that it always has an acceptable balance (Survey Assure does not do this for you). Failure to do so will result in rejected blockchain requests. Please see the "Estimating Blockchain Costs" section for a general guide on anticipated costs.
 
 #### Metamask
 
@@ -94,7 +94,7 @@ Once installed, you will need to fund your wallet. To fund your wallet, you can 
 
 #### Testnet Faucets
 
-Faucets allow you to acquire a small amount of "testnet ETH". [Click here](https://docs.ethhub.io/using-ethereum/test-networks/) for information on the differences between the various testnets. Recommended Ethereum testnets:
+Faucets allow you to acquire a small amount of "testnet ETH". [Click here](https://docs.ethhub.io/using-ethereum/test-networks/) for information on the differences between the various testnets. Recommended Ethereum Testnets:
 
 - [Kovan](https://faucet.kovan.network/)
 - [Rinkeby](https://www.rinkeby.io/#faucet)
@@ -132,7 +132,7 @@ You are now ready to deploy the application to your web server. If the applicati
 
 ### Update Your `.env` Files
 
-Open your new `.env` file and update your environment variables accoding to your desired configuration (follow the comments within each `.env` file for information on what each config value represents.).
+Open your new `.env` file and update your environment variables according to your desired configuration (follow the comments within each `.env` file for information on what each config value represents.).
 
 **Important: Never commit the `.env` file to a git repository and keep its contents secret at all times!**
 
@@ -157,7 +157,7 @@ SURVEY_DATA_PROVIDER_CRED1=YOUR_API_KEY_HERE
 
 ### A Note About Deploying to PaaS Services (Config Values)
 
-If you are deploying to an PaaS platform like [Heroku](https://devcenter.heroku.com/articles/config-vars), [Netlify](https://docs.netlify.com/configure-builds/environment-variables/) or [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html#environments-cfg-softwaresettings-console) without using Docker, you will need to manually input all environment variables into those platforms directly before deploying. In other words, your `.env` file only matter for Docker and local deployments.
+If you are deploying to a PaaS platform like [Heroku](https://devcenter.heroku.com/articles/config-vars), [Netlify](https://docs.netlify.com/configure-builds/environment-variables/) or [AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environments-cfg-softwaresettings.html#environments-cfg-softwaresettings-console) without using Docker, you will need to manually input all environment variables into those platforms directly before deploying. In other words, your `.env` file only matters for Docker and local deployments.
 
 ## 3. Deploying
 
@@ -179,7 +179,7 @@ You will need [Postgres](https://www.postgresql.org/) running locally before the
 
 Once running, create a database that the application can use. An example (which is actually used by Docker for the production build) can be found within the `api/db/init.sql` file.
 
-Once your database is setup, update your `api/.env` file with the correct connection details.
+Once your database is set up, update your `api/.env` file with the correct connection details.
 
 ```
 PGDATABASE
@@ -224,8 +224,8 @@ You are now ready to go!
 The following example is not an endorsement of Heroku over other platforms, but rather a practical example of the above steps for a real-world platform. The process would be *very* similar for other PaaS providers.
 
 - In Heroku, create two separate apps, one for the API (buildpack = heroku/nodejs), one for the frontend (buildpack = https://github.com/mars/create-react-app-buildpack).
-- For the API, provision a "Heroku Postgres" add on.
-- For both apps, copy the contents of the respective local `.env` files to the respective Heroku app configs under "Settings > Reveal Config Vars" in Heroku. Make changes as necessary, keeping in mind that Heroku will automatically set `DATABASE_URL` for you once the database is provisioned, so you should not manually add it. Also note that you will need use `DATABASE_USE_SSL=true` to connect to Heroku Postgres.
+- For the API, provision a "Heroku Postgres" add-on.
+- For both apps, copy the contents of the respective local `.env` files to the respective Heroku app configs under "Settings > Reveal Config Vars" in Heroku. Make changes as necessary, keeping in mind that Heroku will automatically set `DATABASE_URL` for you once the database is provisioned, so you should not manually add it. Also note that you will need to use `DATABASE_USE_SSL=true` to connect to Heroku Postgres.
 - For both the frontend and API, follow the instructions provided within Heroku under "Deploy > Deploy using Heroku Git" to push your code to Heroku.
 - You should now be live!
 

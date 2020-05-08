@@ -35,7 +35,7 @@ title: Best Practices
 ## Maintaining Privacy (Important!)
 
 - NEVER include identifying information in survey questions. While that information isn't sent to the blockchain, the information will be displayed in some places throughout the application.
-- Anonymous, in the sense of this application, is limited to data being hashed. The application, being real time, cannot prevent process issues from potentially revealing user identities. For example, if responses are coming in one-by-one, it is relatively easy to determine who submitted that survey response. You can avoid this by having multiple users taking the survey at once so that it is less clear which response maps to which person, or you can avoid it by deactiving your real-time listener (webhook) from your data source and manually importing the survey responses in batches every couple of hours/days.
+- Anonymous, in the sense of this application, is limited to data being hashed. The application, being real time, cannot prevent process issues from potentially revealing user identities. For example, if responses are coming in one-by-one, it is relatively easy to determine who submitted that survey response. You can avoid this by having multiple users taking the survey at once so that it is less clear which response maps to which person, or you can avoid it by deactivating your real-time listener (webhook) from your data source and manually importing the survey responses in batches every couple of hours/days.
 
 ## Separate live and test surveys
 
@@ -63,7 +63,7 @@ If possible, users should use this tool as a net-new tool, meaning real-time ove
 
 # Performance Tips
 
-- Always use a caching stategy to ensure that complex calculations don't slow down the application.
+- Always use a caching strategy to ensure that complex calculations don't slow down the application.
 - When a survey has been completed, "close" the survey to ensure that we can safely cache everything.
 - While the application is generally mobile-friendly, we recommend using a desktop for all administrative tasks.
 
@@ -78,11 +78,11 @@ The application ships with integration support for [Qualtrics](https://www.qualt
 
 ## Important Note About Webhooks
 
-If you provider supports web hooks, the program will attempt to create a "listener" when you create a survey. However, if this fails, you will need to manually create this listener (from your data source directly) to ensure that data is populated in near-realtime.
+If you provider supports web hooks, the program will attempt to create a "listener" when you create a survey. However, if this fails, you will need to manually create this listener (from your data source directly) to ensure that data is populated in near-real-time.
 
-Please confirm directly from your data source dashboard whether that listerner was created. You can find the correct "Listener URL" under the "Settings" page of your app.
+Please confirm directly from your data source dashboard whether that listener was created. You can find the correct "Listener URL" under the "Settings" page of your app.
 
-**If this web hook was not created with your data provider you will NOT receive data in realtime.** Your only option in that case is to manually import responses from the "Settings" page.
+**If this web hook was not created with your data provider you will NOT receive data in real-time.** Your only option in that case is to manually import responses from the "Settings" page.
 
 
 # Rate Limiting
