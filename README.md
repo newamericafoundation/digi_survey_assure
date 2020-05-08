@@ -20,10 +20,10 @@ A very special thank you to the [US State Department](https://www.state.gov/), w
 - Product Design
   - [Jakob Haglof](http://jakobhaglof.com/)
 - Product
-  - Walter Jansen
+  - [Walter Jansen](https://www.linkedin.com/in/chip-jansen-8844902/)
   - Silvana Rodriguez
-  - Amanda Cajano
-  - Robert Greenfield IV
+  - [Amanda Cajano](https://www.linkedin.com/in/acajano/)
+  - [Robert Greenfield IV](https://twitter.com/robtg4)
 
 ### Harvard SHINE
 - Heloisa Jardim

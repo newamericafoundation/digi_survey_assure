@@ -116,10 +116,10 @@ ConsenSys is a global formation of technologists and entrepreneurs building the 
 - Product Design
   - <a href="http://jakobhaglof.com/" target="_blank">Jakob Haglof</a>
 - Product
-  - Walter Jansen
+  - <a href="https://www.linkedin.com/in/chip-jansen-8844902/" target="_blank">Walter Jansen</a>
   - Silvana Rodriguez
-  - Amanda Cajano
-  - Robert Greenfield IV
+  - <a href="https://www.linkedin.com/in/acajano/" target="_blank">Amanda Cajano</a>
+  - <a href="https://twitter.com/robtg4" target="_blank">Robert Greenfield IV</a>
 
 ## Tools
 
