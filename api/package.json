@@ -1,6 +1,6 @@
 {
-  "name": "survey_aggregator_frontend_api",
-  "version": "0.0.1",
+  "name": "survey_assure_api",
+  "version": "1.0.1",
   "description": "Survey aggregation & audit software with Blockchain immutability built in.",
   "engineStrict": true,
   "engines": {

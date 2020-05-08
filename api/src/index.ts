@@ -22,7 +22,7 @@ const app = new Koa();
 require('koa-qs')(app);
 
 // Rate limiting
-// Set to a maximum of 350 requests per IP per 30 seconds.
+// Set to a maximum of 700 requests per IP every 30 seconds.
 /*
 app.use(ratelimit({
 	driver: 'memory',
@@ -35,7 +35,7 @@ app.use(ratelimit({
 		reset: 'Rate-Limit-Reset',
 		total: 'Rate-Limit-Total'
 	},
-	max: 350,
+	max: 700,
 	disableHeader: false,
 }));
 */
