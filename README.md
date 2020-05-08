@@ -2,7 +2,7 @@
 
 <img src="docs/assets/images/survey_assure_01.png" style="margin-bottom: 12px;" />
 
-Survey Assure is a real-time tool designed to aggregate survey responses from various data sources (for example, [Qualtrics](https://www.qualtrics.com/)), make the contents of those survey responses immutible via use of the [Ethereum](https://ethereum.org/) blockchain, and enable you to create a "presentation layer" in order to visualize those responses and analyze the data without altering it. In other words, it is designed to foster trust between companies and employees by allowing employees to know that their survey responses were not altered in any way.
+Survey Assure is a real-time tool designed to aggregate survey responses from various data sources (for example, [Qualtrics](https://www.qualtrics.com/)), make the contents of those survey responses immutable via use of the Ethereum Blockchain, and enable you to create a "presentation layer" in order to visualize those responses and analyze the data without altering it. In other words, it is designed to foster trust between companies and workers by allowing workers to know that their survey responses were not altered in any way.
 
 # Documentation
 
@@ -23,6 +23,7 @@ A very special thank you to the [US State Department](https://www.state.gov/), w
   - Walter Jansen
   - Silvana Rodriguez
   - Amanda Cajano
+  - Robert Greenfield IV
 
 ### Harvard SHINE
 - Heloisa Jardim

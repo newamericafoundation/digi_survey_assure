@@ -14,7 +14,7 @@ title: Presentation and Viewing
 # Presentation and Viewing
 
 ## Audience
-*These users have a read-only view of the data visualizations; modeled in pie, bar and composite charts with the ability to drill down from a survey group and into individual questions and the blockchain hash information for auditing. These viewers might be:*
+*These users have a read-only view of the data visualizations; modeled in pie, bar and composite charts with the ability to drill down from a survey group and into individual questions and the Blockchain hash information for auditing. These viewers might be:*
   * Survey participants
   * The General Public
   * Management and Stakeholders
@@ -23,7 +23,7 @@ title: Presentation and Viewing
 *Currently supported:*
 
   * **Desktop**. - The application was developed to be responsive and tested with Chrome, Safari and Edge
-   * **Mobile** - The application was developed with a second breakpoint specific for mobile platforms such as iPhone and Android devices. Administrative features are not supported in the Mobile view. The blockchain audit information is limited on mobile devices, it is advised that viewing the audit layer and merkle proofs be done on desktop
+   * **Mobile** - The application was developed with a second breakpoint specific for mobile platforms such as iPhone and Android devices. Administrative features are not supported in the Mobile view. The Blockchain audit information is limited on mobile devices, it is advised that viewing the audit layer and merkle proofs be done on desktop
 
 
 

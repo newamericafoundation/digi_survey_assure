@@ -23,7 +23,7 @@ title: Administration
   * **Composite Group** - A group of composites
   * **Composite** - A set of data points with a formula applied, so a high level summary or metric can be calculated
   * **All Questions** - A comprehensive display of every single question and set of responses, each modeled as a bar or pie chart.
-  * **Chart** - Expanded view for an individual chart, with its associated blockchain records and auditing details
+  * **Chart** - Expanded view for an individual chart, with its associated Blockchain records and auditing details
   * **Merkle Proof** - A deeper view into the data structure that was recorded, and means to validate the hashes at a glance
   * **Question Groups** - A list of question groups, organized by topic label
   * **Question Group** - A collection of chart visualization for that group or topic

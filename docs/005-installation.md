@@ -23,7 +23,7 @@ title: Installation
       - [Run the Deploy Command](#run-the-deploy-command)
   - [4. Configuration Setup](#4-configuration-setup)
     - [Update Your `.env` Files](#update-your-env-files)
-    - [Configurating Data Source Credentials](#configurating-data-source-credentials)
+    - [Configuring Data Source Credentials](#configuring-data-source-credentials)
       - [Qualtrics](#qualtrics)
     - [A Note About Deploying to PaaS Services (Config Values)](#a-note-about-deploying-to-paas-services-config-values)
   - [5. Deploying](#5-deploying)
@@ -65,7 +65,7 @@ In both `/api` and `/frontend`, make a copy of `.example.env` and rename them to
 
 ### Setting Up A Provider
 
-The application uses [EtherJS](https://docs.ethers.io/ethers.js/html/) for all interactions with the blockchain. EtherJS comes with a default provider that connects to both Etherscan & Infura simultaneously, thereby negating the need for you to run a node. In most cases, we recommend that you use this provider, however if you want to set up your own provider you are welcome to do so.
+The application uses [EtherJS](https://docs.ethers.io/ethers.js/html/) for all interactions with the Blockchain. EtherJS comes with a default provider that connects to both Etherscan & Infura simultaneously, thereby negating the need for you to run a node. In most cases, we recommend that you use this provider, however if you want to set up your own provider you are welcome to do so.
 
 ### Using a Custom Infura Account
 
@@ -76,11 +76,11 @@ INFURA_PROJECT_ID
 INFURA_PROJECT_SECRET
 ```
 
-Creating your own Infura account gives you the added benefit of statistics around your calls to the blockchain.
+Creating your own Infura account gives you the added benefit of statistics around your calls to the Blockchain.
 
 ### Setting Up Your Wallet
 
-In order to properly utilize the blockchain for survey responses, you will need to be able to fund transactions. As such, you will need to provide the application with a private key for a wallet you own. We recommend creating a dedicated wallet using [Metamask](https://metamask.io/) for this task. Please see their documentation for information on how to export your key once you've created a wallet.
+In order to properly utilize the Blockchain for survey responses, you will need to be able to fund transactions. As such, you will need to provide the application with a private key for a wallet you own. We recommend creating a dedicated wallet using [Metamask](https://metamask.io/) for this task. Please see their documentation for information on how to export your key once you've created a wallet.
 
 Once exported, open the `api/.env` file and update this config value:
 
@@ -90,7 +90,7 @@ BLOCKCHAIN_WALLET_PRIVATE_KEY
 
 #### A Note About Your Wallet's Balance
 
-You will need to manually manage your wallet and ensure that it always has an acceptable balance (Survey Assure does not do this for you). Failure to do so will result in rejected blockchain requests. Please see the "Estimating Blockchain Costs" section for a general guide on anticipated costs.
+You will need to manually manage your wallet and ensure that it always has an acceptable balance (Survey Assure does not do this for you). Failure to do so will result in rejected Blockchain requests. Please see the "Estimating Blockchain Costs" section for a general guide on anticipated costs.
 
 #### Metamask
 
@@ -134,7 +134,7 @@ You should see something like the following on your screen once successful:
 
 Copy the value of `YOUR_CONTRACT_ADDRESS_HERE` into your `api/.env` file under the `BLOCKCHAIN_CONTRACT_ADDRESS` config option.
 
-You are now ready to deploy the application to your web server. If the application throws an error, you will need to double check all of your blockchain config values to ensure that they are correct and try again.
+You are now ready to deploy the application to your web server. If the application throws an error, you will need to double check all of your Blockchain config values to ensure that they are correct and try again.
 
 ## 4. Configuration Setup
 
@@ -148,7 +148,7 @@ You will need to edit two `.env` files:
 - `frontend/.env`
 - `api/.env`
 
-### Configurating Data Source Credentials
+### Configuring Data Source Credentials
 
 The application reserves five config variables for integrating with various data sources. Please see this guide on which you will need to update for each provider:
 

@@ -1,7 +1,7 @@
 {
   "name": "survey_aggregator_frontend_api",
   "version": "0.0.1",
-  "description": "Survey aggregation & audit software with blockchain immutability built in.",
+  "description": "Survey aggregation & audit software with Blockchain immutability built in.",
   "engineStrict": true,
   "engines": {
     "node": ">= 10.13 <11"

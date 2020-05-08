@@ -36,7 +36,7 @@ title: Contributing
   - [Google Forms Integration](#google-forms-integration)
   - [Frontend TypeScript Migrations](#frontend-typescript-migrations)
   - [Modular Visualizers for Frontend](#modular-visualizers-for-frontend)
-  - [Improved UX around blockchain events/long lived events (mass imports)](#improved-ux-around-blockchain-eventslong-lived-events-mass-imports)
+  - [Improved UX around Blockchain events/long lived events (mass imports)](#improved-ux-around-blockchain-eventslong-lived-events-mass-imports)
   - [Cache Computed Question Responses for Closed Surveys](#cache-computed-question-responses-for-closed-surveys)
   - [Cache "Tag" System](#cache-%22tag%22-system)
   - [Charting Performance Improvements](#charting-performance-improvements)
@@ -215,7 +215,7 @@ In the above example, we are telling the application that question ID `75` on su
 
 ---------
 
-## Improved UX around blockchain events/long lived events (mass imports)
+## Improved UX around Blockchain events/long lived events (mass imports)
 
 - Definition: Blockchain events when performing "mass" actions (mass import, closing a survey, etc.) can take long periods of time. The program needs a better UX for displaying that progress to the user.
 
@@ -259,7 +259,7 @@ In the above example, we are telling the application that question ID `75` on su
 
 ## Mark Surveys as "Test" Surveys
 
-- Definition: Ability to mark a survey as a test survey, making it bypass the blockchain communications.
+- Definition: Ability to mark a survey as a test survey, making it bypass the Blockchain communications.
 
 
 

@@ -104,7 +104,7 @@ In this instance data for visualization is stored in Postgres.
 
 **User Interface**
 
-  * Users can access a platform for a survey topic to see all the survey responses visualized in charts and composite summaries. The user can audit and validate the data presented by drilling down to a layer with the blockchain hash information.
+  * Users can access a platform for a survey topic to see all the survey responses visualized in charts and composite summaries. The user can audit and validate the data presented by drilling down to a layer with the Blockchain hash information.
 
 **Business Logic**
 

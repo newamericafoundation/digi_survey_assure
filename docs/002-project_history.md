@@ -11,12 +11,12 @@ title: Project History
   - [Stakeholders & Participants](#stakeholders--participants)
   - [Problem](#problem)
   - [Solution](#solution)
-  - [Current State (2019)](#current-state-2019)
+  - [Original State (2019)](#original-state-2019)
   - [With Survey Assure (2020)](#with-survey-assure-2020)
 
 # Project History
 
-*The genesis of this work started with an extensive discovery phase that examined the current state of workforce surveys and the concerns/issues around them.  We then looked at how blockchain technology could address some of these issues particularly around the ideas of increased security, immutability, transparency and efficiency.  Wanting our solution to be as accessible as possible to the broader community we undertook a pilot to develop an open source application that would leverage the advantages of the blockchain, enable workers and managers alike to have better insight into the results of surveys and be able to continuously evolve.*
+*The genesis of this work started with an extensive discovery phase that examined the current state of workforce surveys and the concerns/issues around them.  We then looked at how Blockchain technology could address some of these issues particularly around the ideas of increased security, immutability, transparency and efficiency.  Wanting our solution to be as accessible as possible to the broader community we undertook a pilot to develop an open source application that would leverage the advantages of the Blockchain, enable workers and managers alike to have better insight into the results of surveys and be able to continuously evolve.*
 
 ## Stakeholders & Participants
 
@@ -53,14 +53,13 @@ The corporate stakeholder, client of Harvard SHINE and audience for the worker�
 
   * For stakeholders and management, there was a lengthy post survey process before seeing the results of these surveys. This reduced opportunities to be timely and take action as issues were arising in factory locations.
   
-
 ## Solution
 
   * Develop a system that protects the worker’s identity, while recording their data and survey responses in a transparent, immutable fashion; with every answer auditable on Blockchain.
 
   * Develop an application that streamlines the survey results process, so results could be seen in near-real time.
 
-## Current State (2019)
+## Original State (2019)
 *The current system and steps as they existed during our Discovery period:*
 
   * Every year, Apparel International factory workers in 4 locations in Mexico participate in a Worker Wellbeing survey. 
@@ -73,8 +72,6 @@ The surveys are facilitated on-site by individuals from Harvard SHINE, who bring
   * The reports are shared with key stakeholders and management at Apparel International and Levi Strauss Foundation.
   * These stakeholders then decide what actions to take based on the data highlighted areas for improvement around topics like health, environment, personal well-being and incidents of harassment.
 
-
-
 ## With Survey Assure (2020)
 *After defining the issues and areas for improvement above, we developed a new system and process:*
 
@@ -85,7 +82,7 @@ The surveys are facilitated on-site by individuals from Harvard SHINE, who bring
   * The facilitator can then verify the survey’s structure in the Survey Assure platform, including all created composite formulas, which can be set up in advance of the next on-site survey.
   * Surveys would be conducted on-site as they have been done in previous years, with Harvard SHINE facilitating on-site.
   * When a factory worker submits their completed survey, the information is saved to Qualtrics, automatically formatted in a process called normalization, then recorded on the Ethereum Blockchain and finally pushed to the Survey Assure platform via the data source connection.
-  * Each new submission by a factory worker will continue to populate and update all the relevant charts and composites in the Survey Assure platform in near real-time. These updates include the new blockchain hash records for each chart and set of answers.
+  * Each new submission by a factory worker will continue to populate and update all the relevant charts and composites in the Survey Assure platform in near real-time. These updates include the new Blockchain hash records for each chart and set of answers.
   * The Survey Assure platform would be accessible to stakeholders, management and factory workers.
 
 
