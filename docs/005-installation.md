@@ -52,7 +52,7 @@ The GitHub repo for the project can be found <a href="https://github.com/newamer
 To do this, use a CLI tool (for example "Terminal" on Mac), navigate to the directory where you want the project to live (`cd path/to/survey_assure`), and close the repo using:
 
 ```
-git clone https://github.com/newamericafoundation/digi_survey_assure.git digi_survey_assure .
+git clone https://github.com/newamericafoundation/digi_survey_assure.git .
 ```
 
 If your machine doesn't have git installed, please refer to this <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">documentation</a>.
@@ -120,7 +120,7 @@ Now that you have selected a network to deploy on and have found your private ke
 
 #### Run the Deploy Command
 
-**Important Note:** You should do this *locally* and *before* you deploy your application to your web server (Survey Assure needs your contract address for configuration reasons).
+**Important Note:** You can choose to deploy from your local computer, or you can choose to push your project to your hosting provider and deploy from there. If you choose to deploy locally, make sure you run `npm install` and `npm run build` from the `api` directory.
 
 To deploy your contract, you will need to run the following command using a command line tool running from the `api` folder within the project:
 - `npm run bc:deploy` 
