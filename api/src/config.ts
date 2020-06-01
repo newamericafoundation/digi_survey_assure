@@ -14,7 +14,7 @@ export const config = {
     /**
      * Blockchain-related Configuration
      */
-    BLOCKCHAIN_CONTRACT_ADDRESS: getEnvVariable('BLOCKCHAIN_CONTRACT_ADDRESS'),
+    BLOCKCHAIN_CONTRACT_ADDRESS: getEnvVariable('BLOCKCHAIN_CONTRACT_ADDRESS', ''),
     BLOCKCHAIN_PROVIDER_NETWORK: getEnvVariable('BLOCKCHAIN_PROVIDER_NETWORK', 'kovan'),
     BLOCKCHAIN_WALLET_PRIVATE_KEY: getEnvVariable('BLOCKCHAIN_WALLET_PRIVATE_KEY'),
     INFURA_PROJECT_ID: getEnvVariable('INFURA_PROJECT_ID', null),
