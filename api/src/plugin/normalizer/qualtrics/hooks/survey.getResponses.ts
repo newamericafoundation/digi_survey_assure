@@ -13,7 +13,7 @@ let timeout;
 export async function run(pluginConfig: any, body: IGetResponses): Promise<string[] | null> {
     try {
         const qualtricsFileExportRequest: request.Response = await request
-            .post(`${pluginConfig.apiUrl}/surveys/${body.surveyId}/export-responses`)
+            .post(`${pluginConfig.apiExportUrl}/surveys/${body.surveyId}/export-responses`)
             .send({ "format": "json" })
             .set('Content-type', 'application/json')
             .set('X-API-Token', pluginConfig.apiSecretKey);
@@ -66,7 +66,7 @@ export async function run(pluginConfig: any, body: IGetResponses): Promise<strin
 async function checkStatus(pluginConfig: any, surveyId: string, progressId: string): Promise<string | null> {
     try {
         const qualtricsFileExportStatus: request.Response = await request
-            .get(`${pluginConfig.apiUrl}/surveys/${surveyId}/export-responses/${progressId}`)
+            .get(`${pluginConfig.apiExportUrl}/surveys/${surveyId}/export-responses/${progressId}`)
             .set('Content-type', 'application/json')
             .set('X-API-Token', pluginConfig.apiSecretKey);
 
@@ -88,7 +88,7 @@ async function checkStatus(pluginConfig: any, surveyId: string, progressId: stri
 
 async function getExportFile(pluginConfig: any, surveyId: string, fileExportId: string): Promise<any> {
     return request
-        .get(`${pluginConfig.apiUrl}/surveys/${surveyId}/export-responses/${fileExportId}/file`)
+        .get(`${pluginConfig.apiExportUrl}/surveys/${surveyId}/export-responses/${fileExportId}/file`)
         .set('Content-type', 'application/json')
         .set('X-API-Token', pluginConfig.apiSecretKey)
         .on('progress', (event: any) => {
