@@ -137,6 +137,7 @@ export default abstract class BaseModal extends React.Component<IProps> {
 
             new Api(endpoint, method)
                 .setPayload(this.sendFields())
+                .setTimeout(45000)
                 .secure()
                 .call()
                 .then((response: any) => {
