@@ -107,11 +107,13 @@ class QuestionAudit extends React.Component {
         const auditableData = [];
         if (this.state.loaded) {
             this.state.audit.forEach(auditEntry => {
-                auditableData.push(<AuditTableEntry
-                    key={auditEntry.id}
-                    surveyId={this.state.survey.id}
-                    questionId={this.state.question.id}
-                    auditData={auditEntry}></AuditTableEntry>);
+                auditableData.push(
+                    <AuditTableEntry
+                        key={auditEntry.id}
+                        surveyId={this.state.survey.id}
+                        questionId={this.state.question.id}
+                        auditData={auditEntry}></AuditTableEntry>
+                );
             });
         }
 
@@ -147,7 +149,6 @@ class QuestionAudit extends React.Component {
                     <div className="surveyOverviewData">
                         <span>{translate('source')}: {this.state.surveyGroup.source_plugin}</span>
                         <span>{translate('source_id')}: {this.state.survey.external_source_id}</span>
-                        <span>{translate('responses')}: {this.state.totalResponses}</span>
                     </div>
 
                     <h2 className="marginBottomNone">{translate('blockchain_hash_summary')}</h2>
