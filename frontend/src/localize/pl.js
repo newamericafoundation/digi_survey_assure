@@ -53,6 +53,8 @@ module.exports = {
     "date_end": "",
     "date_range_description": "",
     "date_recorded": "Data nagrania",
+    "date_received_by_sa": "",
+    "date_received_by_blockchain": "",
     "delete": "",
     "description": "",
     "details_additional": "",

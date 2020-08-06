@@ -164,31 +164,34 @@ class Question extends React.Component {
         }
 
         return (
-            <div className={classes} style={innerStyle}>
-                {this.state.timeout > 0 && <div className="floatLeft textGray textSmall">
-                    Refreshes every {Math.floor((this.state.timeout / 1000))} seconds.
+            <div>
+                {this.props.displayAnswerTitle && <h2 className="marginBottomNone">{translate('answer_distribution')}</h2>}
+                <div className={classes} style={innerStyle}>
+                    {this.state.timeout > 0 && <div className="floatLeft textGray textSmall">
+                        Refreshes every {Math.floor((this.state.timeout / 1000))} seconds.
                 </div>}
-                {!this.props.hideAudit && <div className="graphAudit">
-                    <Link to={link}>{translate('audit')}</Link>
-                    <AdminButton
-                        action="question-public"
-                        textOnly={true}
-                        inline={true}
-                        secondaryButton={true}
-                        icon="eye"
-                        subsetId={this.props.questionId}></AdminButton>
-                    <AdminButton
-                        action="question-spanRow"
-                        textOnly={true}
-                        inline={true}
-                        secondaryButton={true}
-                        icon={spanIcon}
-                        subsetId={this.props.questionId}></AdminButton>
-                </div>}
+                    {!this.props.hideAudit && <div className="graphAudit">
+                        <Link to={link}>{translate('audit')}</Link>
+                        <AdminButton
+                            action="question-public"
+                            textOnly={true}
+                            inline={true}
+                            secondaryButton={true}
+                            icon="eye"
+                            subsetId={this.props.questionId}></AdminButton>
+                        <AdminButton
+                            action="question-spanRow"
+                            textOnly={true}
+                            inline={true}
+                            secondaryButton={true}
+                            icon={spanIcon}
+                            subsetId={this.props.questionId}></AdminButton>
+                    </div>}
 
-                <div>
-                    <div className="positionRelative" style={styles}>
-                        <canvas id={refQuestionId} ref={this.chartRef} />
+                    <div>
+                        <div className="positionRelative" style={styles}>
+                            <canvas id={refQuestionId} ref={this.chartRef} />
+                        </div>
                     </div>
                 </div>
             </div>

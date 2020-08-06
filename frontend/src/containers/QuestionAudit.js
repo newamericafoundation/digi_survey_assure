@@ -137,6 +137,7 @@ class QuestionAudit extends React.Component {
 
                 <div className="container">
                     {this.state.question && <Question
+                        displayAnswerTitle={true}
                         filters={this.props.filterQueryString}
                         key={this.state.question.id}
                         surveyId={this.state.survey.id}
@@ -158,6 +159,8 @@ class QuestionAudit extends React.Component {
                             <Tr>
                                 <Th>{translate('transaction')}</Th>
                                 <Th>{translate('date_recorded')}</Th>
+                                <Th>{translate('date_received_by_sa')}</Th>
+                                <Th>{translate('date_received_by_blockchain')}</Th>
                                 <Th>{translate('answer')}</Th>
                                 <Th>{translate('merkle_root')}</Th>
                             </Tr>
@@ -165,7 +168,6 @@ class QuestionAudit extends React.Component {
                         <Tbody>{auditableData}</Tbody>
                     </Table>
                 </div>
-
             </div>
         );
     }

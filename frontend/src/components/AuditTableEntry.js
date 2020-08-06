@@ -36,12 +36,18 @@ class SurveyFilter extends React.Component {
             const merkleProofView = `/survey/${this.props.surveyId}/audit/${this.props.auditData.id}`;
 
             if (this.state.answerData) {
-                const cleanDate = new Date(this.state.auditData.recorded_at).toISOString().split('T')[0];
+                console.log(this.state.answerData, this.state.auditData);
+
+                const dateRecordedAt = new Date(this.state.auditData.recorded_at).toISOString().split('T')[0];
+                const dateCapturedIntoSA = new Date(this.state.auditData.created_at).toISOString().split('T')[0];
+                const dateSentToChain = new Date(this.state.auditData.date_sent_to_chain).toISOString().split('T')[0];
 
                 return (
                     <Tr>
                         <Td className="limitText"><a href={buildConfirmationLink(this.state.auditData.tx_id, this.state.auditData.network)} rel="noopener noreferrer" target="_blank">{this.state.auditData.tx_id}</a></Td>
-                        <Td>{cleanDate}</Td>
+                        <Td>{dateRecordedAt}</Td>
+                        <Td>{dateCapturedIntoSA}</Td>
+                        <Td>{dateSentToChain}</Td>
                         <Td>{this.state.answerData.legible_value}</Td>
                         <Td><Link to={merkleProofView}>{this.state.auditData.merkle_root.substr(0, 35)}...</Link></Td>
                     </Tr>
