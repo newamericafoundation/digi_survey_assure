@@ -41,8 +41,8 @@ export default class ModalSurvey extends BaseModal {
                 surveyGroupId: data.survey_group_id,
                 active: data.active,
                 externalSourceId: data.external_source_id,
-                startDate: formatDataForInput(data.start_at),
-                endDate: formatDataForInput(data.end_at),
+                startDate: data.start_at,
+                endDate: data.end_at,
                 groupUrl: (data.metadata && 'custom_route_url' in data.metadata) ? data.metadata.custom_route_url : '',
                 imageUrl: (data.metadata && 'image' in data.metadata) ? data.metadata.image : '',
             });
@@ -124,14 +124,14 @@ export default class ModalSurvey extends BaseModal {
                             <div>
                                 <label>{translate('date_start')}</label>
                                 <input
-                                    value={this.state.startDate}
+                                    value={formatDataForInput(this.state.startDate)}
                                     type="date"
                                     onChange={(event) => this.handleInputChange('startDate', event.target.value)} />
                             </div>
                             <div>
                                 <label>{translate('date_end')}</label>
                                 <input
-                                    value={this.state.endDate}
+                                    value={formatDataForInput(this.state.endDate)}
                                     type="date"
                                     onChange={(event) => this.handleInputChange('endDate', event.target.value)} />
                             </div>
