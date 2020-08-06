@@ -1,10 +1,11 @@
 export function formatDataForInput(inputDate: string): string {
     const dateObject = new Date(inputDate);
-    const day = dateObject.getDate();
-    const month = dateObject.getMonth() + 1;
+
+    const month = dateObject.getUTCMonth() + 1;
+    const day = dateObject.getUTCDate();
 
     return [
-        dateObject.getFullYear(),
+        dateObject.getUTCFullYear(),
         (month < 10) ? `0${month}` : month,
         (day < 10) ? `0${day}` : day,
     ].join('-');
