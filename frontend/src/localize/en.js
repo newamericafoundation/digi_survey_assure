@@ -10,6 +10,7 @@ module.exports = {
     "aggregates_not_found": "We could not find any aggregates for this survey group! Please make sure questions have been mapped from survey to survey.",
     "all": "All",
     "answer": "Answer",
+    "answer_distribution": "Answer Distribution",
     "answer_label": "Answer Label",
     "answered": "Answered",
     "apply": "Apply",
