@@ -19,7 +19,6 @@ class Header extends React.Component {
     state = {
         language: 'en',
         surveyData: null,
-        totalSurveyed: 0,
     };
 
     componentDidMount() {
@@ -58,7 +57,6 @@ class Header extends React.Component {
 
                     this.setState({
                         surveyData,
-                        totalSurveyed: surveyData.responses
                     });
                 })
                 .catch((e) => {
@@ -98,17 +96,14 @@ class Header extends React.Component {
         }
 
         const breadcrumbs = [];
-        if (this.state.surveyData) {
+        if (this.state.surveyData && this.props.page !== 'surveyGroup') {
             if (this.props.page !== 'listSurveyGroups') {
                 const groupLink = `/group/${this.state.surveyData.survey_group_id}`;
                 const surveyLink = `/survey/${this.state.surveyData.id}`;
 
                 breadcrumbs.push(<Link key="bc_group" to={groupLink}><b>{this.state.surveyData.surveyGroupName}</b></Link>);
-
-                if (this.props.page !== 'surveyGroup') {
-                    breadcrumbs.push(' / ');
-                    breadcrumbs.push(<Link key="bc_survey" to={surveyLink}>{this.state.surveyData.name}</Link>);
-                }
+                breadcrumbs.push(' / ');
+                breadcrumbs.push(<Link key="bc_survey" to={surveyLink}>{this.state.surveyData.name}</Link>);
             }
         }
 
@@ -139,8 +134,8 @@ class Header extends React.Component {
                         <i className="step fi-list size-24"></i>
                     </div>
 
-                    {this.state.totalSurveyed > 0 && <div className="totalSurveyed">
-                        {this.state.totalSurveyed} Responses</div>}
+                    {this.state.surveyData && <div className="totalSurveyed">
+                        {this.state.surveyData.responses} {translate('responses')}</div>}
                     {breadcrumbs.length > 0 && <div className="breadcrumbs">
                         {breadcrumbs}
                     </div>}
