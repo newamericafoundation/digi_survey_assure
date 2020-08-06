@@ -36,7 +36,7 @@ class SurveyFilter extends React.Component {
             const merkleProofView = `/survey/${this.props.surveyId}/audit/${this.props.auditData.id}`;
 
             if (this.state.answerData) {
-                const cleanDate = new Date(this.state.auditData.date_sent_to_chain).toISOString().split('T')[0];
+                const cleanDate = new Date(this.state.auditData.recorded_at).toISOString().split('T')[0];
 
                 return (
                     <Tr>
