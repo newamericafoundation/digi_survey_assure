@@ -9,9 +9,6 @@ npm-debug.log*
 # Dependencies
 node_modules/
 
-# CLI
-cli/
-
 # Docs
 docs/
 
