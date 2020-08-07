@@ -38,12 +38,11 @@ class Qualtrics extends BaseNormalizerClass implements INormalizerClass {
 
         const formattedAnswers = [];
         for (const questionId of cleanData.displayedFields) {
-            const submittedValue = cleanData.values[questionId];
-
             const question = await getQuestionFromExternalId(internalSurveyId.id, questionId);
             if (!question) { continue; }
 
-            if (submittedValue) {
+            const submittedValue = cleanData.values[questionId];
+            if (submittedValue || submittedValue === 0) {
                 const questionOption = await getQuestionOptionFromRawValue(question.id, submittedValue);
                 if (!questionOption) { continue; }
 
