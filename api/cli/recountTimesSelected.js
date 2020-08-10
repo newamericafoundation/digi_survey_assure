@@ -12,7 +12,7 @@ readline.question(`Input survey ID to recount:`, async (surveyId) => {
     const questionsOnSurvey = await questionModel.getQuestionsOnSurvey(surveyId);
 
     for (const question of questionsOnSurvey) {
-        const questionOption = await questionOptionsModel.listQuestionOptions(question.id);
+        const questionOption = await questionOptionsModel.getQuestionOptions(question.id);
 
         for (const anOption of questionOption) {
             const timesSelected = await surveyResponseAnswer.countTimesAQuestionOptionWasSelected(question.id, anOption.id);
