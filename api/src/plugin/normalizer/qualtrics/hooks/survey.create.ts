@@ -91,7 +91,7 @@ async function generateSurveyStructure(qualtricsSurveyId: string, surveyId: numb
                             for (const rawAnswer of questionAnswers) {
                                 await createQuestionOption({
                                     question_id: internalQuestionId,
-                                    raw_value: aQuestion.RecodeValues ? aQuestion.RecodeValues[rawAnswer] : rawAnswer,
+                                    raw_value: getRawValue(aQuestion.RecodeValues, +rawAnswer),
                                     legible_value: removeHtml(aQuestion.Answers[rawAnswer].Display),
                                     order: optionOrder += 1,
                                 });
@@ -118,7 +118,7 @@ async function generateSurveyStructure(qualtricsSurveyId: string, surveyId: numb
                             for (const rawAnswer of questionChoices) {
                                 await createQuestionOption({
                                     question_id: internalQuestionId,
-                                    raw_value: aQuestion.RecodeValues ? aQuestion.RecodeValues[rawAnswer] : rawAnswer,
+                                    raw_value: getRawValue(aQuestion.RecodeValues, +rawAnswer),
                                     legible_value: removeHtml(aQuestion.Choices[rawAnswer].Display),
                                     order: optionOrder += 1
                                 });
@@ -225,6 +225,58 @@ function createBlocks(qualtricsFlows: any): string[] {
     return qualtricsFlows.Flow.map((aFlow: any) => {
         if (aFlow.Type === 'Block' || aFlow.Type === 'Standard') { return aFlow.ID; }
     });
+}
+
+/**
+ * Sometimes RecodeValues has key -> value, sometimes just values.
+ * Bad Qualtrics, bad!
+ * getRawValue(aQuestion.RecodeValues, rawAnswer)
+ * aQuestion.RecodeValues ? aQuestion.RecodeValues[rawAnswer] : rawAnswer,
+ */
+function getRawValue(recodeValues: any, rawAnswer: number): number {
+    if (!recodeValues) {
+        return rawAnswer;
+    }
+
+    /*
+    I honestly don't know if this is right, Qualtrics is a mess.
+    
+    Clear "Object" Example (which says if I get 0, it means 2, ie "no"):
+
+        "Choices": {
+            "1": { "Display": "&nbsp;Yes" },
+            "2": { "Display": "&nbsp;No" }
+        },
+        "RecodeValues": {
+            "1": 1,
+            "2": "0"
+        },
+
+    A Confusing "Array" Example (does this mean if I get a 1, it displays a 0?? That's what I'm assuming):
+    The problem is that I can't use a key like above, so what if the RecodesValues are out of 
+    order? Is that a thing Qualtrics would do? I have no clue.
+
+        "Choices":[
+            { "Display":"0" },
+            { "Display":"1" },
+            { "Display":"2" },
+            { "Display":"3" },
+            { "Display":"4" },
+            { "Display":"5" },
+            { "Display":"6" },
+            { "Display":"7" },
+            { "Display":"8" },
+            { "Display":"9" },
+            { "Display":"10" }
+        ],
+
+        "RecodeValues":[ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" ],
+    */
+    if (Array.isArray(recodeValues)) {
+        return rawAnswer - 1;
+    } else {
+        return recodeValues[rawAnswer];
+    }
 }
 
 async function getBlock(qualtricsSurveyId: string, blockId: string, pluginConfig: any): Promise<any> {
