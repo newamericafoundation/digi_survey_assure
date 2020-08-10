@@ -35,6 +35,7 @@ export async function getSurveyWithGroup(surveyId: number): Promise<ISurveyWithS
         )
         .join('survey_group', 'survey_group.id', '=', 'survey.survey_group_id')
         .where('survey.id', surveyId)
+        .orderBy('survey.created_at', 'asc')
         .limit(1)
         .then((rows: any) => {
             return rows[0] ? rows[0] : null;
