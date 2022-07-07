@@ -65,7 +65,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "merkletreejs": "^0.1.11",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node-input-validator": "^4.2.0",
     "pg": "7.12.1",
     "redis": "^2.8.0",
