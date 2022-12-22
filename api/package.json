@@ -52,7 +52,7 @@
     "dotenv": "^6.1.0",
     "ethers": "^4.0.47",
     "he": "^1.2.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^0.19.5",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
